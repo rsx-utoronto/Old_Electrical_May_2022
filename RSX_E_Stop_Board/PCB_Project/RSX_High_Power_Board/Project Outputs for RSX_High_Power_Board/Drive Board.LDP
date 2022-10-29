@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=drive board-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=drive board-slotholes.txt|DrillLayers=gtl,gbl
