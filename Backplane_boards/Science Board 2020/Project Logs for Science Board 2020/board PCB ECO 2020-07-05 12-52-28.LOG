@@ -1,0 +1,39 @@
+Removed Pin From Net: NetName=NetP17_1 Pin=P17-3
+Removed Pin From Net: NetName=NetP17_1 Pin=R7-2
+Removed Pin From Net: NetName=NetP17_1 Pin=U4-11
+Removed Member From Class: ClassName=PowerDevices Member=P4
+Removed Member From Class: ClassName=PowerNet Member=NetP17_1
+Removed Member From Class: ClassName=PowerNet Member=NetP17_2
+Change Managed Component Library Link : Designator=C1 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=B4858B76-0B79-4F81-B997-B16A9EB4DEBA Old RevisionGUID= New RevisionGUID=37276071-2795-4DE5-B3F4-E1A861F9C380
+Change Managed Component Library Link : Designator=C2 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=B4858B76-0B79-4F81-B997-B16A9EB4DEBA Old RevisionGUID= New RevisionGUID=37276071-2795-4DE5-B3F4-E1A861F9C380
+Change Managed Component Library Link : Designator=C4 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=B4858B76-0B79-4F81-B997-B16A9EB4DEBA Old RevisionGUID= New RevisionGUID=37276071-2795-4DE5-B3F4-E1A861F9C380
+Change Managed Component Library Link : Designator=L1 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=691CDBFF-6EE6-4912-A9DB-DCCF330BEAD6 Old RevisionGUID= New RevisionGUID=0AE87BB6-B8C6-4D7B-8C56-900AEE63ECAA
+Change Managed Component Library Link : Designator=L2 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=691CDBFF-6EE6-4912-A9DB-DCCF330BEAD6 Old RevisionGUID= New RevisionGUID=0AE87BB6-B8C6-4D7B-8C56-900AEE63ECAA
+Change Managed Component Library Link : Designator=SW1 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=2CC9625A-C69B-40C5-8675-AE47424E6E11 Old RevisionGUID= New RevisionGUID=A2D135F6-0CD4-49EB-816E-9E71BDB0A7EF
+Change Managed Component Library Link : Designator=U2 Old VaultGUID= New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID= New ItemGUID=E8ECF488-5CDF-469E-B64D-42FD146F6A4A Old RevisionGUID= New RevisionGUID=E5B4F036-D4B0-4EF4-AE32-A022A0A370AC
+Added Pin To Net: NetName=NetP17_2 Pin=C12-2
+Added Pin To Net: NetName=NetP17_1 Pin=C14-2
+Change Net Name : Old Net Name=NetP17_1 New Net Name=NetC14_2
+Change Net Name : Old Net Name=NetP17_2 New Net Name=NetC12_2
+Added Pin To Net: NetName=NetC13_2 Pin=C13-2
+Added Pin To Net: NetName=NetC13_2 Pin=P17-3
+Added Pin To Net: NetName=NetC13_2 Pin=R7-2
+Added Pin To Net: NetName=NetC13_2 Pin=U4-11
+Added Net: Name=NetC13_2
+Added Pin To Net: NetName=NetU1_12 Pin=U1-12
+Added Net: Name=NetU1_12
+Added Member To Class: ClassName=PowerNet Member=Wire NetLED_W4_1
+Added Rule: Name=Schematic Width Constraint
+Added Rule: Name=Schematic Width Constraint_1
+Added Rule: Name=Schematic Width Constraint_2
+Added Rule: Name=Schematic Width Constraint_3
+Added Rule: Name=Schematic Width Constraint_4
+Added Rule: Name=Schematic Width Constraint_5
+Added Rule: Name=Schematic Width Constraint_6
+Added Rule: Name=Schematic Width Constraint_7
+Added Rule: Name=Schematic Width Constraint_8
+Added Rule: Name=Schematic Width Constraint_9
+Added Rule: Name=Schematic Width Constraint_10
+Added Rule: Name=Schematic Width Constraint_11
+Added Rule: Name=Schematic Width Constraint_12
+Added Rule: Name=Schematic Width Constraint_13

@@ -1,0 +1,10 @@
+Output: Cadnetix Netlist
+Type  : CadnetixNetlist
+From  : Project [Science Board 2020.PrjPcb]
+   Generated File[board.NET]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 12:45:22 On 2020-06-17

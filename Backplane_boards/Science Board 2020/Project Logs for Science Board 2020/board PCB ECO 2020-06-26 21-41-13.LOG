@@ -1,0 +1,3 @@
+Added Component: Designator=TP4(50_MIL_PAD)
+Added Pin To Net: NetName=5V0_REG Pin=TP4-1
+Added Member To Class: ClassName=PowerRails Member=Component TP4 12V0_RAW

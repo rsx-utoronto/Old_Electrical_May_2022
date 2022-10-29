@@ -1,0 +1,79 @@
+Removed Pin From Net: NetName=5V0_REG Pin=C4-2
+Removed Pin From Net: NetName=5V0_REG Pin=C5-1
+Removed Pin From Net: NetName=5V0_REG Pin=C5-2
+Removed Pin From Net: NetName=5V0_REG Pin=C6-2
+Removed Pin From Net: NetName=5V0_REG Pin=L1-1
+Removed Pin From Net: NetName=5V0_REG Pin=P2-2
+Removed Pin From Net: NetName=5V0_REG Pin=P3-2
+Removed Pin From Net: NetName=5V0_REG Pin=P5-2
+Removed Pin From Net: NetName=5V0_REG Pin=P6-2
+Removed Pin From Net: NetName=5V0_REG Pin=P7-3
+Removed Pin From Net: NetName=5V0_REG Pin=P11-4
+Removed Pin From Net: NetName=5V0_REG Pin=P12-4
+Removed Pin From Net: NetName=5V0_REG Pin=P13-4
+Removed Pin From Net: NetName=5V0_REG Pin=P14-4
+Removed Pin From Net: NetName=5V0_REG Pin=P15-6
+Removed Pin From Net: NetName=5V0_REG Pin=R_BIAS_H1-1
+Removed Pin From Net: NetName=5V0_REG Pin=SW1-5
+Removed Pin From Net: NetName=5V0_REG Pin=U1-59
+Removed Pin From Net: NetName=5V0_REG Pin=U2-4
+Removed Pin From Net: NetName=5V0_REG Pin=U2-5
+Removed Pin From Net: NetName=5V0_REG Pin=U3-3
+Removed Pin From Net: NetName=5V0_REG Pin=U3-5
+Removed Pin From Net: NetName=5V0_REG Pin=U5-6
+Removed Member From Class: ClassName=PowerRails Member=C5
+Added Component: Designator=C?(330uF throught hole)
+Add component (AddParameter): Name = "Capacitance"; Value = "330uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "Radial"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.rubycon.co.jp/en/catalog/e_pdfs/aluminum/e_ZLH.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.rubycon.co.jp/en/catalog/e_pdfs/aluminum/e_ZLH.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.rubycon.co.jp/en/catalog/e_pdfs/aluminum/Radial_Lead_Alumi_Eng.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.rubycon.co.jp/en/catalog/e_pdfs/aluminum/Radial_Lead_Alumi_Eng.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height - Seated (Max)"; Value = "0.551inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Impedance"; Value = "39mR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Pitch"; Value = "0.197inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Life (Hours)"; Value = "10000Hour"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "Rubycon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "35ZLH330MEFCT810X12.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,52000, 10=0,36900, 100=0,24280 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ripple Current"; Value = "731.5mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14330"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1189-3752-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "35V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V0_REG Pin=C?-2
+Change Net Name : Old Net Name=5V0_REG New Net Name=GND
+Added Pin To Net: NetName=5V0_REG Pin=C4-2
+Added Pin To Net: NetName=5V0_REG Pin=C6-2
+Added Pin To Net: NetName=5V0_REG Pin=C?-1
+Added Pin To Net: NetName=5V0_REG Pin=L1-1
+Added Pin To Net: NetName=5V0_REG Pin=P2-2
+Added Pin To Net: NetName=5V0_REG Pin=P3-2
+Added Pin To Net: NetName=5V0_REG Pin=P5-2
+Added Pin To Net: NetName=5V0_REG Pin=P6-2
+Added Pin To Net: NetName=5V0_REG Pin=P7-3
+Added Pin To Net: NetName=5V0_REG Pin=P11-4
+Added Pin To Net: NetName=5V0_REG Pin=P12-4
+Added Pin To Net: NetName=5V0_REG Pin=P13-4
+Added Pin To Net: NetName=5V0_REG Pin=P14-4
+Added Pin To Net: NetName=5V0_REG Pin=P15-6
+Added Pin To Net: NetName=5V0_REG Pin=R_BIAS_H1-1
+Added Pin To Net: NetName=5V0_REG Pin=SW1-5
+Added Pin To Net: NetName=5V0_REG Pin=U1-59
+Added Pin To Net: NetName=5V0_REG Pin=U2-4
+Added Pin To Net: NetName=5V0_REG Pin=U2-5
+Added Pin To Net: NetName=5V0_REG Pin=U3-3
+Added Pin To Net: NetName=5V0_REG Pin=U3-5
+Added Pin To Net: NetName=5V0_REG Pin=U5-6
+Added Net: Name=5V0_REG
+Added Member To Class: ClassName=PowerRails Member=Component C? 330uF
+Added Member To Class: ClassName=PowerNet Member=Wire GND
+Added Member To Class: ClassName=PowerNet Member=Wire NetC12_2
+Added Member To Class: ClassName=PowerNet Member=Wire NetC13_2

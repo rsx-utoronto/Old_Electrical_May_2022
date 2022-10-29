@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=Main.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=Main.SchDoc|FileName=PowerDevices.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=Main.SchDoc|FileName=PowerRails.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=Main.SchDoc|FileName=Sensors.SchDoc|SheetNumber= 

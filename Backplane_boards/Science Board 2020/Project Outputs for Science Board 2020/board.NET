@@ -1,0 +1,154 @@
+PARTS LIST
+
+Cap Pol1          RB7.6-15        C1
+0603 470pF        CAPC1608X90X35LL10T15C2
+0603 100pF        CAPC1608X90X35LL10T15C3
+0603 10uF         CAPC1608X90X35LL10T15C4
+0603 4.7uF        CAPC1608X90X35LL10T15C5
+Diode 1N4001      DO-41           D1
+N5V0              LTST-C171TBKT   D2
+5V0               LTST-C171TBKT   D3
+Relay-SPDT        MODULE5B        K?
+10uH              BOUR-CM322522_V L1
+10uH              BOUR-CM322522_V L2
+Black0            HDR1X4          P1
+Black1            HDR1X4          P2
+Blue0             HDR1X4          P3
+Blue1             HDR1X4          P4
+Blue2             HDR1X4          P5
+Blue3             HDR1X4          P6
+Blue4             HDR1X4          P7
+PMT               HDR1X6H         P8
+BME680            HDR1X7          P9
+Mini-Fit Jr 4 Pos MOLEX 0039281043P10
+Header 2          HDR1X2          P12
+Header 2          HDR1X2          P13
+Servo1            Header3         P14
+Pump driver L9110SHDR1X6          P15
+BNC_PMT           BNC_RA CON      P16
+Servo1            Header3         P17
+Servo1            Header3         P18
+Servo1            Header3         P19
+Mini-Fit Jr 4 Pos MOLEX 0039281043P20
+Res1              RESC1608X06N_0603R2
+Res1              RESC1608X06N_0603R3
+Res3              RESC1608X06N_0603R4
+SMW210RJT         TECO-SMW2-2_V   R5
+Res3              RESC1608X06N_0603R6
+SMW210RJT         TECO-SMW2-2_V   R7
+Res3              RESC1608X06N_0603R8
+Res3              RESC1608X06N_0603R9
+R_PMT_BIAS_H      AXIAL-0.3       R_BIAS_H
+1.2K              AXIAL-0.3       R_BIAS_L
+JS202011SCQN      CKCP-JS202011SCQN-6_VSW1
+12V0_RAW          50_MIL_PAD      TP1
+5V0_REG           50_MIL_PAD      TP2
+GND               50_MIL_PAD      TP3
+N5V0_REG          50_MIL_PAD      TP4
+AD8400            AD8400(SOIC8)   U1
+L7805CV           TO220           U2
+ArduinoDue        Arduino Due     U3
+VR_N5V            LT-S5-5-SOT-23_LU4
+Optoisolator2     SOP5(6)         U5
+Optoisolator2     SOP5(6)         U6
+L7805CV           TO220           U7
+EOS
+NET LIST
+
+NODENAME NetR9-1          $
+    R9         1  SW1        4
+NODENAME NetR8-1          $
+    R8         1  SW1        1
+NODENAME NetD3-1          $
+    D3         1  R9         2
+NODENAME NetD2-1          $
+    D2         1  R8         2
+NODENAME NetC3-1          $
+    C3         1  R2         1  R3         2  U4         3
+NODENAME NetC2-2          $
+    C2         2  D1         1  L2         1
+NODENAME NetC2-1          $
+    C2         1  L1         2  U4         1
+NODENAME N5V0_REG         $
+    C3         2  C4         2  L2         2  P8         5  R2         2  SW1        2  TP4        1
+NODE     11               $
+    K?         1  P1         4  P2         4  P3         4  P4         4  P5         4  P6         4  P7         4
+NODE     12               $
+    K?         2  P20        2
+NODE     13               $
+    K?         4  U3        43
+NODE     14               $
+    K?         5  U3        44
+NODENAME NetP8-2          $
+    P8         2  U1         7
+NODENAME NetP12-1         $
+    P12        1  R5         1
+NODENAME NetP12-2         $
+    P12        2  U5         5
+NODENAME NetP13-1         $
+    P13        1  R7         1
+NODENAME NetP13-2         $
+    P13        2  U6         5
+NODENAME NetP14-3         $
+    P14        3  U3        71
+NODENAME NetP15-1         $
+    P15        1  U3        75
+NODENAME NetP15-2         $
+    P15        2  U3        76
+NODENAME NetP15-5         $
+    P15        5  U3        77
+NODENAME NetP15-6         $
+    P15        6  U3        78
+NODENAME NetP17-3         $
+    P17        3  U3        72
+NODENAME NetP18-3         $
+    P18        3  U3        73
+NODENAME NetP19-3         $
+    P19        3  U3        74
+NODENAME NetR4-1          $
+    R4         1  U5         1
+NODENAME NetR4-2          $
+    R4         2  U3        24
+NODENAME NetR6-1          $
+    R6         1  U6         1
+NODENAME NetR6-2          $
+    R6         2  U3        23
+NODENAME NetR_BIAS_H-2    $
+    R_BIAS_H   2  U1         8
+NODENAME NetR_BIAS_L-1    $
+    R_BIAS_L   1  U1         1
+NODENAME NetU1-3          $
+    U1         3  U3        79
+NODENAME NetU1-4          $
+    U1         4  U3        90
+NODENAME NetU1-5          $
+    U1         5  U3        89
+NODENAME NetP16-1         $
+    P16        1  U3        20
+NODENAME I2C DATA         $
+    P9         6  U3        61
+NODENAME I2C CLOCK        $
+    P9         4  U3        62
+NODENAME GND              $
+    C1         1  C4         1  C5         1  D1         2  D2         2  D3         2  P1         1  P2         1  P3         3  P4         3  P5         3  P6         3  P7         3  P8         4  P9         3  P10        3  P10        4  P14        1  P15        4  P16        2  P17        1  P18        1  P19        1  P20        1  R3         1  R_BIAS_H   1  R_BIAS_L   2  TP3        1  U1         2  U2         2  U3         6  U3         7  U4         2  U5         3  U5         4  U6         3  U6         4  U7         2
+NODENAME Ana_Blue-4       $
+    P7         1  U3        15
+NODENAME Ana_Blue-3       $
+    P6         1  U3        14
+NODENAME Ana_Blue-2       $
+    P5         1  U3        13
+NODENAME Ana_Blue-1       $
+    P4         1  U3        12
+NODENAME Ana_Blue-0       $
+    P3         1  U3        11
+NODENAME Ana_Black-1      $
+    P2         2  U3        10
+NODENAME Ana_Black-0      $
+    P1         2  U3         9
+NODENAME 12V0             $
+    P10        1  P10        2  P14        2  R5         2  R7         2  TP1        1  U2         1  U7         1
+NODENAME 5V0_REG          $
+    C1         2  C5         2  K?         3  L1         1  P15        3  P17        2  P18        2  P19        2  SW1        5  TP2        1  U1         6  U2         3  U3         8  U4         4  U4         5  U7         3
+NODENAME 3V0_REG          $
+    P9         1  U3         4
+EOS

@@ -1,0 +1,253 @@
+Removed Pin From Net: NetName=GND Pin=GasDetectorBatt-1
+Removed Pin From Net: NetName=GND Pin=K1-3
+Removed Pin From Net: NetName=3V0_REG Pin=P9-1
+Removed Pin From Net: NetName=GND Pin=P9-3
+Removed Pin From Net: NetName=GND Pin=P10-3
+Removed Pin From Net: NetName=GND Pin=P14-1
+Removed Pin From Net: NetName=GND Pin=P16-2
+Removed Pin From Net: NetName=GND Pin=P16-2
+Removed Pin From Net: NetName=GND Pin=P16-2
+Removed Pin From Net: NetName=GND Pin=P17-1
+Removed Pin From Net: NetName=GND Pin=P17-2
+Removed Pin From Net: NetName=GND Pin=P18-1
+Removed Pin From Net: NetName=GND Pin=P18-2
+Removed Pin From Net: NetName=GND Pin=P19-1
+Removed Pin From Net: NetName=GND Pin=P19-2
+Removed Pin From Net: NetName=NetP13_1 Pin=R7-1
+Removed Pin From Net: NetName=GND Pin=TP2-1
+Removed Pin From Net: NetName=GND Pin=TP3-1
+Removed Pin From Net: NetName=GND Pin=U2-2
+Removed Pin From Net: NetName=GND Pin=U2-3
+Removed Pin From Net: NetName=3V0_REG Pin=U3-4
+Removed Pin From Net: NetName=GND Pin=U3-6
+Removed Pin From Net: NetName=GND Pin=U3-7
+Removed Pin From Net: NetName=GND Pin=U3-8
+Removed Pin From Net: NetName=NetP15_1 Pin=U3-75
+Removed Pin From Net: NetName=NetU1_3 Pin=U3-79
+Removed Pin From Net: NetName=NetU1_5 Pin=U3-89
+Removed Pin From Net: NetName=NetU1_4 Pin=U3-90
+Removed Pin From Net: NetName=GND Pin=U5-4
+Removed Pin From Net: NetName=GND Pin=U6-3
+Removed Pin From Net: NetName=GND Pin=U6-4
+Removed Pin From Net: NetName=GND Pin=U7-2
+Removed Pin From Net: NetName=GND Pin=U7-3
+Removed Member From Class: ClassName=board Member=C1
+Removed Member From Class: ClassName=board Member=GasDetectorBatt
+Removed Member From Class: ClassName=board Member=K1
+Removed Member From Class: ClassName=board Member=P7
+Removed Member From Class: ClassName=board Member=P8
+Removed Member From Class: ClassName=board Member=P9
+Removed Member From Class: ClassName=board Member=P10
+Removed Member From Class: ClassName=board Member=P13
+Removed Member From Class: ClassName=board Member=P14
+Removed Member From Class: ClassName=board Member=P15
+Removed Member From Class: ClassName=board Member=P16
+Removed Member From Class: ClassName=board Member=P17
+Removed Member From Class: ClassName=board Member=P18
+Removed Member From Class: ClassName=board Member=P19
+Removed Member From Class: ClassName=board Member=R4
+Removed Member From Class: ClassName=board Member=R5
+Removed Member From Class: ClassName=board Member=R6
+Removed Member From Class: ClassName=board Member=R7
+Removed Member From Class: ClassName=board Member=TP1
+Removed Member From Class: ClassName=board Member=TP2
+Removed Member From Class: ClassName=board Member=TP3
+Removed Member From Class: ClassName=board Member=U3
+Removed Member From Class: ClassName=board Member=U5
+Removed Member From Class: ClassName=board Member=U6
+Removed Member From Class: ClassName=board Member=U7
+Change Component Footprint: Designator=U3 Old Footprint=Arduino Due New Footprint=TO220
+Change Component Footprint: Designator=P16 Old Footprint=BNC_RA CON New Footprint=HDR1X7
+Change Component Footprint: Designator=P13 Old Footprint=HDR1X2 New Footprint=MQ series BLUE sensor
+Change Component Footprint: Designator=P2 Old Footprint=HDR1X4 New Footprint=Header3
+Change Component Footprint: Designator=P3 Old Footprint=HDR1X4 New Footprint=Header3
+Change Component Footprint: Designator=P4 Old Footprint=HDR1X4 New Footprint=Header3
+Change Component Footprint: Designator=P6 Old Footprint=HDR1X4 New Footprint=Header3
+Change Component Footprint: Designator=P5 Old Footprint=HDR1X4 New Footprint=LS9112
+Change Component Footprint: Designator=P7 Old Footprint=HDR1X4 New Footprint=MOLEX 0039281043
+Change Component Footprint: Designator=P15 Old Footprint=HDR1X6 New Footprint=MQ series BLUE sensor
+Change Component Footprint: Designator=P17 Old Footprint=Header3 New Footprint=HDR1X2
+Change Component Footprint: Designator=P14 Old Footprint=Header3 New Footprint=MQ series BLUE sensor
+Change Component Footprint: Designator=U5 Old Footprint=SOP5(6) New Footprint=TO220
+Change Component Footprint: Designator=U2 Old Footprint=TO220 New Footprint=Arduino Mega
+Change Component Comment : Designator=U3 Old Comment=ArduinoDue New Comment=L7805CV
+Change Component Comment : Designator=P2 Old Comment=Black1 New Comment=Servo1
+Change Component Comment : Designator=P3 Old Comment=Blue0 New Comment=Servo4
+Change Component Comment : Designator=P4 Old Comment=Blue1 New Comment=Servo2
+Change Component Comment : Designator=P5 Old Comment=Blue2 New Comment=Pump driver L9110S
+Change Component Comment : Designator=P6 Old Comment=Blue3 New Comment=Servo3
+Change Component Comment : Designator=P7 Old Comment=Blue4 New Comment=Power_IN
+Change Component Comment : Designator=P9 Old Comment=BME680 New Comment=MQ series BLACK Sensor
+Change Component Comment : Designator=P16 Old Comment=BNC_PMT New Comment=BME680
+Change Component Comment : Designator=P12 Old Comment=Header 2 New Comment=LED1
+Change Component Comment : Designator=P13 Old Comment=Header 2 New Comment=MQ series BLUE Sensor
+Change Component Comment : Designator=U2 Old Comment=L7805CV New Comment=Arduino Mega
+Change Component Comment : Designator=P10 Old Comment=Mini-Fit Jr 4 Pos New Comment=MQ series BLACK Sensor
+Change Component Comment : Designator=U5 Old Comment=Optoisolator2 New Comment=L7805CV
+Change Component Comment : Designator=P15 Old Comment=Pump driver L9110S New Comment=MQ series BLUE Sensor
+Change Component Comment : Designator=P17 Old Comment=Servo1 New Comment=LED1
+Change Component Comment : Designator=P14 Old Comment=Servo1 New Comment=MQ series BLUE Sensor
+Change Component Designator: OldDesignator=P8 NewDesignator=P1
+Change component parameters: Designator = "P2"; Footprint = "Header3"; UniqueID = "\JTXHMQOZ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P3"; Footprint = "Header3"; UniqueID = "\KWQRAAAC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P4"; Footprint = "Header3"; UniqueID = "\LDAPWORV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P6"; Footprint = "Header3"; UniqueID = "\YYEANVPZ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P7"; Footprint = "MOLEX 0039281043"; UniqueID = "\DBQNXUXP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P9"; UniqueID = "\NSQHVNEH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P13"; Footprint = "MQ series BLUE sensor"; UniqueID = "\LLWBLLDQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P15"; Footprint = "MQ series BLUE sensor"; UniqueID = "\RJIIWMUI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P17"; Footprint = "HDR1X2"; UniqueID = "\HVGDGRLN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U2"; Footprint = "Arduino Mega"; UniqueID = "\RJXWBUJG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "U3"; Footprint = "TO220"; UniqueID = "\ZNNAMORP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.st.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000444.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/PACKAGE_INFORMATION/CD00004649.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "16/11/2011"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "TO, Thru-Hole, Vertical, Heatsink Mounted; 3 In-Line Leads; Pitch 2.54 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "TO220"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageVersion"; Value = "ver3.0"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U5"; Footprint = "TO220"; UniqueID = "\ADBVAREX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.st.com"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000444.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/PACKAGE_INFORMATION/CD00004649.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "16/11/2011"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "TO, Thru-Hole, Vertical, Heatsink Mounted; 3 In-Line Leads; Pitch 2.54 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "TO220"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageVersion"; Value = "ver3.0"; VariantName = "[No Variations]"
+Added Component: Designator=P8(BNC_RA CON)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P11(MQ series BLUE sensor)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=GND Pin=P2-1
+Added Pin To Net: NetName=GND Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P3-1
+Added Pin To Net: NetName=GND Pin=P3-2
+Added Pin To Net: NetName=GND Pin=P4-1
+Added Pin To Net: NetName=GND Pin=P4-2
+Added Pin To Net: NetName=GND Pin=P5-3
+Added Pin To Net: NetName=GND Pin=P5-4
+Added Pin To Net: NetName=GND Pin=P6-1
+Added Pin To Net: NetName=GND Pin=P6-2
+Added Pin To Net: NetName=GND Pin=P7-3
+Added Pin To Net: NetName=GND Pin=P7-4
+Added Pin To Net: NetName=GND Pin=P8-2
+Added Pin To Net: NetName=GND Pin=P8-2
+Added Pin To Net: NetName=GND Pin=P8-2
+Added Pin To Net: NetName=GND Pin=P9-1
+Added Pin To Net: NetName=GND Pin=P9-4
+Added Pin To Net: NetName=GND Pin=P10-1
+Added Pin To Net: NetName=GND Pin=P11-3
+Added Pin To Net: NetName=GND Pin=P11-4
+Added Pin To Net: NetName=GND Pin=P13-3
+Added Pin To Net: NetName=GND Pin=P13-4
+Added Pin To Net: NetName=GND Pin=P14-3
+Added Pin To Net: NetName=GND Pin=P14-4
+Added Pin To Net: NetName=3V0_REG Pin=P16-1
+Added Pin To Net: NetName=GND Pin=P16-3
+Added Pin To Net: NetName=GND Pin=TP1-1
+Added Pin To Net: NetName=NetU1_3 Pin=U2-49
+Added Pin To Net: NetName=NetU1_4 Pin=U2-51
+Added Pin To Net: NetName=NetU1_5 Pin=U2-52
+Added Pin To Net: NetName=3V0_REG Pin=U2-55
+Added Pin To Net: NetName=GND Pin=U2-57
+Added Pin To Net: NetName=GND Pin=U2-58
+Added Pin To Net: NetName=GND Pin=U2-59
+Added Pin To Net: NetName=NetP13_1 Pin=U2-64
+Added Pin To Net: NetName=NetP15_1 Pin=U2-66
+Added Pin To Net: NetName=GND Pin=U3-2
+Added Pin To Net: NetName=GND Pin=U3-3
+Added Pin To Net: NetName=GND Pin=U5-2
+Change Net Name : Old Net Name=GND New Net Name=5V0_REG
+Change Net Name : Old Net Name=NetP8_2 New Net Name=NetP1_2
+Added Pin To Net: NetName=14V8_RAW Pin=P7-1
+Added Pin To Net: NetName=14V8_RAW Pin=P7-2
+Added Pin To Net: NetName=14V8_RAW Pin=TP2-1
+Added Pin To Net: NetName=14V8_RAW Pin=U3-1
+Added Pin To Net: NetName=14V8_RAW Pin=U5-1
+Added Net: Name=14V8_RAW
+Added Pin To Net: NetName=NetP2_3 Pin=P2-3
+Added Pin To Net: NetName=NetP2_3 Pin=U2-5
+Added Net: Name=NetP2_3
+Added Pin To Net: NetName=NetP3_3 Pin=P3-3
+Added Pin To Net: NetName=NetP3_3 Pin=U2-4
+Added Net: Name=NetP3_3
+Added Pin To Net: NetName=NetP4_3 Pin=P4-3
+Added Pin To Net: NetName=NetP4_3 Pin=U2-6
+Added Net: Name=NetP4_3
+Added Pin To Net: NetName=NetP5_1 Pin=P5-1
+Added Pin To Net: NetName=NetP5_1 Pin=U2-8
+Added Net: Name=NetP5_1
+Added Pin To Net: NetName=NetP5_2 Pin=P5-2
+Added Pin To Net: NetName=NetP5_2 Pin=U2-9
+Added Net: Name=NetP5_2
+Added Pin To Net: NetName=NetP5_5 Pin=P5-5
+Added Pin To Net: NetName=NetP5_5 Pin=U2-10
+Added Net: Name=NetP5_5
+Added Pin To Net: NetName=NetP5_6 Pin=P5-6
+Added Pin To Net: NetName=NetP5_6 Pin=U2-11
+Added Net: Name=NetP5_6
+Added Pin To Net: NetName=NetP6_3 Pin=P6-3
+Added Pin To Net: NetName=NetP6_3 Pin=U2-7
+Added Net: Name=NetP6_3
+Added Pin To Net: NetName=NetP8_1 Pin=P8-1
+Added Pin To Net: NetName=NetP8_1 Pin=U2-60
+Added Net: Name=NetP8_1
+Added Pin To Net: NetName=NetP9_2 Pin=P9-2
+Added Pin To Net: NetName=NetP9_2 Pin=U2-61
+Added Net: Name=NetP9_2
+Added Pin To Net: NetName=NetP10_2 Pin=P10-2
+Added Pin To Net: NetName=NetP10_2 Pin=U2-62
+Added Net: Name=NetP10_2
+Added Pin To Net: NetName=NetP11_1 Pin=P11-1
+Added Pin To Net: NetName=NetP11_1 Pin=U2-63
+Added Net: Name=NetP11_1
+Added Pin To Net: NetName=NetP14_1 Pin=P14-1
+Added Pin To Net: NetName=NetP14_1 Pin=U2-65
+Added Net: Name=NetP14_1
+Added Pin To Net: NetName=NetP16_4 Pin=P16-4
+Added Pin To Net: NetName=NetP16_4 Pin=U2-21
+Added Net: Name=NetP16_4
+Added Pin To Net: NetName=NetP16_6 Pin=P16-6
+Added Pin To Net: NetName=NetP16_6 Pin=U2-20
+Added Net: Name=NetP16_6
+Change Class Name : Old Net Name=board New Net Name=Main
+Change Class Name : Old Net Name=Neg5V0Reg New Net Name=PowerRails
+Added Class: Name=LEDDrivers
+Added Class: Name=Sensors
+Added Class: Name=PowerNet
+Added Member To Class: ClassName=PowerRails Member=Component C1 Cap Pol1
+Added Member To Class: ClassName=PowerRails Member=Component P7 Power_IN
+Added Member To Class: ClassName=PowerRails Member=Component TP1 12V0_RAW
+Added Member To Class: ClassName=PowerRails Member=Component TP2 5V0_REG
+Added Member To Class: ClassName=PowerRails Member=Component U3 L7805CV
+Added Member To Class: ClassName=PowerRails Member=Component U5 L7805CV
+Change Room Name: Old Name=Neg5V0Reg New Name=PowerRails
+Change Room Scope: Old Scope=InComponentClass('Neg5V0Reg') New Scope=InComponentClass('PowerRails')
+Added Room: Name=LEDDrivers
+Added Room: Name=Main
+Added Room: Name=Sensors

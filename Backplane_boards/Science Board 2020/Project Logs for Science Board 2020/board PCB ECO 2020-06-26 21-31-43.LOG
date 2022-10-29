@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetF1_2 Pin=TP1-1
+Removed Member From Class: ClassName=PowerNet Member=NetF1_2
+Added Pin To Net: NetName=14V8_RAW Pin=TP1-1
+Change Net Name : Old Net Name=NetF1_2 New Net Name=14V8_IN
+Added Member To Class: ClassName=PowerNet Member=Wire 14V8_IN

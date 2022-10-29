@@ -1,0 +1,10 @@
+Added Component: Designator=P9(MQ series BLACK sensor)
+Added Component: Designator=P10(MQ series BLACK sensor)
+Added Pin To Net: NetName=GND Pin=P9-1
+Added Pin To Net: NetName=NetP9_2 Pin=P9-2
+Added Pin To Net: NetName=5V0_REG Pin=P9-4
+Added Pin To Net: NetName=GND Pin=P10-1
+Added Pin To Net: NetName=NetP10_2 Pin=P10-2
+Added Pin To Net: NetName=5V0_REG Pin=P10-4
+Added Member To Class: ClassName=Sensors Member=Component P9 MQ series BLACK Sensor
+Added Member To Class: ClassName=Sensors Member=Component P10 MQ series BLACK Sensor

@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=5V0_REG Pin=POT1-CCW
+Added Pin To Net: NetName=5V0_REG Pin=POT1-W

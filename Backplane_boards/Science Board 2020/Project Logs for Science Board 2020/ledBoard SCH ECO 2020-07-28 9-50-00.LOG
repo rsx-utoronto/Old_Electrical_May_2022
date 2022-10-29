@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=POT1 Old Footprint=POT-LV10 New Footprint=POT4MM-2
+Change Component Footprint: Designator=R11 Old Footprint=POT-LV10 New Footprint=POT4MM-2
+Change Component Comment: Designator=D1 Old Comment=Diode 1N4007 New Comment=Diode 1N4001

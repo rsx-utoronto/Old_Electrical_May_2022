@@ -1,0 +1,15 @@
+Change Component Designator: OldDesignator= NewDesignator=R_BIAS_L1
+Added Component: Designator=LED_10W1(10W_LED_200200)
+Added Component: Designator=P19(MOLEX 0039281043)
+Added Pin To Net: NetName=NetLED_10W1_1 Pin=LED_10W1-1
+Added Pin To Net: NetName=NetLED_10W1_1 Pin=P19-3
+Added Pin To Net: NetName=NetLED_10W1_1 Pin=P19-4
+Added Net: Name=NetLED_10W1_1
+Added Pin To Net: NetName=NetLED_10W1_2 Pin=LED_10W1-2
+Added Pin To Net: NetName=NetLED_10W1_2 Pin=P19-1
+Added Pin To Net: NetName=NetLED_10W1_2 Pin=P19-2
+Added Net: Name=NetLED_10W1_2
+Added Member To Class: ClassName=ledBoard Member=Component LED_10W1 10W_RoyalBlue_LED
+Added Member To Class: ClassName=ledBoard Member=Component P19 Mini-Fit Jr 4 Pos
+Added Rule: Name=Schematic Width Constraint
+Added Rule: Name=Schematic Width Constraint_1

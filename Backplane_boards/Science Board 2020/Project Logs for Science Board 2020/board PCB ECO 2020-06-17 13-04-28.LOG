@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=K? NewDesignator=K1
+Change Net Name : Old Net Name=NetK?_1 New Net Name=5V0_GAS SENSOR
+Change Net Name : Old Net Name=NetK?_2 New Net Name=5V0_BATT
+Change Net Name : Old Net Name=NetK?_4 New Net Name=NetK1_4
+Change Net Name : Old Net Name=NetK?_5 New Net Name=NetK1_5
