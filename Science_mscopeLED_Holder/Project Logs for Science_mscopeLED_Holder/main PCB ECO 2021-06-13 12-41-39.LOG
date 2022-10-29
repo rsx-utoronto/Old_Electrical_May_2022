@@ -1,0 +1,31 @@
+Added Component: Designator=LED_W1(MP-3030-210H-40-95)
+Added Component: Designator=LED_W2(MP-3030-210H-40-95)
+Added Component: Designator=LED_W3(MP-3030-210H-40-95)
+Added Component: Designator=LED_W4(MP-3030-210H-40-95)
+Added Component: Designator=LED_W5(MP-3030-210H-40-95)
+Added Component: Designator=LED_W5(MP-3030-210H-40-95)
+Added Component: Designator=LED_W6(MP-3030-210H-40-95)
+Added Component: Designator=LED_W8(MP-3030-210H-40-95)
+Added Pin To Net: NetName=GND Pin=LED_W1-1
+Added Pin To Net: NetName=NetLED_W1_2 Pin=LED_W1-2
+Added Pin To Net: NetName=NetLED_W1_2 Pin=LED_W2-1
+Added Pin To Net: NetName=NetLED_W2_2 Pin=LED_W2-2
+Added Pin To Net: NetName=GND Pin=LED_W3-1
+Added Pin To Net: NetName=NetLED_W3_2 Pin=LED_W3-2
+Added Pin To Net: NetName=NetLED_W3_2 Pin=LED_W4-1
+Added Pin To Net: NetName=NetLED_W4_2 Pin=LED_W4-2
+Added Pin To Net: NetName=GND Pin=LED_W5-1
+Added Pin To Net: NetName=NetLED_W6_2 Pin=LED_W6-2
+Added Pin To Net: NetName=NetLED_W6_2 Pin=P1-3
+Added Pin To Net: NetName=NetLED_W5_2 Pin=LED_W5-2
+Added Pin To Net: NetName=NetLED_W5_2 Pin=LED_W6-1
+Added Net: Name=NetLED_W5_2
+Added Member To Class: ClassName=main Member=Component LED_W1 MP-3030-210H-40-95
+Added Member To Class: ClassName=main Member=Component LED_W2 MP-3030-210H-40-95
+Added Member To Class: ClassName=main Member=Component LED_W3 MP-3030-210H-40-95
+Added Member To Class: ClassName=main Member=Component LED_W4 MP-3030-210H-40-95
+Added Member To Class: ClassName=main Member=Component LED_W5 MP-3030-210H-40-95
+Added Member To Class: ClassName=main Member=Component LED_W5 MP-3030-210H-40-95
+Added Member To Class: ClassName=main Member=Component LED_W6 MP-3030-210H-40-95
+Added Member To Class: ClassName=main Member=Component LED_W8 MP-3030-210H-40-95
+Added Room: Name=main

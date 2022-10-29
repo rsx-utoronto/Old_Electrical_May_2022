@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Main.PcbDoc   2022-04-17  12:33:45 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : Main-RoundHoles.TXT
+ASCII SquareHoles File : Main-SquareHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      63mil (1.6mm)                                             Round             4         PTH        0.55inch (13.90mm)
+T2      126mil (3.2mm)                                            Round             3         PTH        3.74inch (95.00mm)
+T4      819mil (20.8mm)                                           Square            1         NPTH       0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              8
+
+Total Processing Time (hh:mm:ss) : 00:00:00

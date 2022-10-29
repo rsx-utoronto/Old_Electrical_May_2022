@@ -1,0 +1,12 @@
+DRC Rules Export File for PCB: C:\Users\bchansohn\Documents\rsx_pcb\Science_mscopeLED_Holder\main.PcbDoc
+RuleKind=Width|RuleName=Schematic Width Constraint_13|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_12|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_11|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_10|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_9|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_8|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_7|Scope=Board|Minimum=10.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

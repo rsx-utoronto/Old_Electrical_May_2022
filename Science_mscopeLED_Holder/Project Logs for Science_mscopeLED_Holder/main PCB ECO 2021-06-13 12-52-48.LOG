@@ -1,0 +1,9 @@
+Added Component: Designator=TH1(m3screw)
+Added Component: Designator=TH2(m3screw)
+Added Component: Designator=TH3(m3screw)
+Added Component: Designator=TH4(m3screw)
+Added Member To Class: ClassName=main Member=Component TH1 m3 screw
+Added Member To Class: ClassName=main Member=Component TH2 m3 screw
+Added Member To Class: ClassName=main Member=Component TH3 m3 screw
+Added Member To Class: ClassName=main Member=Component TH4 m3 screw
+Added Room: Name=main
