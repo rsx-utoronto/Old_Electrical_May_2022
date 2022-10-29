@@ -1,0 +1,14 @@
+Added Component: Designator=P1(Amphenol 10101788-002CLF)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Added Component: Designator=P2(Amphenol 10101788-002CLF)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Added Component: Designator=P(SATA Female)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Added Component: Designator=TH1(m3screw)
+Added Component: Designator=TH2(m3screw)
+Added Component: Designator=TH3(m3screw)
+Added Component: Designator=TH4(m3screw)
+Added Component: Designator=TH5(m3screw)
+Added Component: Designator=TH6(m3screw)
+Added Class: Name=Test
+Added Room: Name=Test
