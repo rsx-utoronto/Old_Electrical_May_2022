@@ -1,0 +1,631 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1/23/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:07:54 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc" class="file"><acronym title="C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc">C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">1</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">92</td></tr>
+</table>
+</td>
+</table><a name="ID41B4JBIDJ0G4EQNOP3CFPYBTYNWAPHUL4JDWD0D1V3BINV5U0RZO"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIKM2JZE1KWYVK1MUBG53MOWFMK3NQVMHHM445CC0G3VPHKTK2K4G">Unplated multi-layer pad(s) detected</a></td>
+<td class="column2">1</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">1</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID35PYVOWQLNX2NPVCOMMHDX5CQGCYNFW3US52WDJUCZWVKLXCIFML">Clearance Constraint (Gap=8mil) (All),(All)</a></td>
+<td class="column2">41</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHTXYYVJUAOIPBHXW05HPYW5Z2HG5WEV0IC1FTCBM2RVNJRXOTS2L">Clearance Constraint (Gap=20mil) (InNet('37VP')or InNet('37VP_RAW') or InNet('E1 W1')or InNet('E1 W2')or InNet('E1 W3')or InNet('E2 W1')or InNet('E2 W2')or InNet('E2 W3')or InNet('E3 W1')or InNet('E3 W2')or InNet('E3 W3')or InNet('E4 W1')or InNet('E4 W2')or InNet('E4 W3')or InNet('E5 W1')or InNet('E5 W2')or InNet('E5 W3')or InNet('E6 W1')or InNet('E6 W2')or InNet('E6 W3')or InNet('NetESC1_1')or InNet('NetESC1_3')or InNet('NetESC1_5')or InNet('NetESC2_1')or InNet('NetESC2_3')or InNet('NetESC2_5')or InNet('NetESC3_1')or InNet('NetESC3_3')or InNet('NetESC3_5')or InNet('NetESC4_1')or InNet('NetESC4_3')or InNet('NetESC4_5')or InNet('NetESC5_1')or InNet('NetESC5_3')or InNet('NetESC5_5')or InNet('NetESC6_1')or InNet('NetESC6_3')or InNet('NetESC6_5')or InNet('NetC5_1')or InNet('NetC8_1')or InNet('NetC17_1')or InNet('NetC26_1')or InNet('NetC35_1')or InNet('NetC44_1')),(All)</a></td>
+<td class="column2">15</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAEJMNIWAOICGLP0NHWSR4S3JOBBLI1QCGYF2O1OIQGL1NWZFKRSC">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">36</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1JFUC1JWRUCAOGOMIW4QJ23P5ORULX1LAU2DEKMWYDOALNMH3HLE">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPIVX0TDVDIUQH42DT4VNTORC1LNV3CZMOBYSX1FGUEVSGH244JSP">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDV23E1I5YKXG1B0SD5XEA311NJMETPB04FF3FPFLHARJUNMYORZ4D">Width Constraint (Min=8mil) (Max=100mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLRGB2CJMKE1BOTEKDLPFX5N54FLIUTLYBEJE2QMZDFA2GJUDS5VF">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPS5MZ4IFYE4LLA321PW1CY4MMHXN1XYG5KGMXNCGEQIQRRXM04N">Hole Size Constraint (Min=1mil) (Max=1000mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGNJCZG20OEETM55LUYUCJ1G0NHA3GINXXAHPBQDN5GWM1CGFDU0C">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTABJCPTR5OIHNXOKZK5YUH2PUNB3AV5VGA0ZWCM4KVSELJA53KLB">Minimum Solder Mask Sliver (Gap=1mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEDUF5A2A43NIENN4GJS5UHNEDIUEK5JHUX5Z5RAH3PNHHSWMYRB">Silk To Solder Mask (Clearance=5mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLHJY3ZM1NTAVFAZOXW5MEKDBVJJIS3ZKOTZ5OMGZPZK4IVARWOOH">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAI5FX2TV0GUGFHQ4KU1CARATTJMAZA1VELMI0HNGL4HG34UEYQ3N">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5WWM5FHVN3LTCOENCGB3RIIZRNHW3XS50GZNCLOUAPG5GM2XH5FD">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHCRXDSQRGRCKP011FKSQPULY5HZWJBPJXSOVMFMNSFIHHNI1OIFG">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">92</td>
+</tr>
+</table><br><a name="IDEBJTAEKGSOALEZA0U0FWPPVAYLB3CR214UMCM5CKNSOKJTIM1RSG"><h2>Warnings</h2></a><a name="IDIKM2JZE1KWYVK1MUBG53MOWFMK3NQVMHHM445CC0G3VPHKTK2K4G"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Unplated multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1973.646mil|Location2.X=2048.449mil|Location1.Y=4528.055mil|Location2.Y=4602.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1973.646mil|Location2.X=2048.449mil|Location1.Y=4528.055mil|Location2.Y=4602.858mil|Absolute=True">Pad P14-6(2011.047mil,4565.457mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=318mil|Location2.X=16068.465mil|Location1.Y=136mil|Location2.Y=7575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=318mil|Location2.X=16068.465mil|Location1.Y=136mil|Location2.Y=7575mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID35PYVOWQLNX2NPVCOMMHDX5CQGCYNFW3US52WDJUCZWVKLXCIFML"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=8mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12833.46mil|Location2.X=12865.663mil|Location1.Y=4203.993mil|Location2.Y=4218.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12833.46mil|Location2.X=12865.663mil|Location1.Y=4203.993mil|Location2.Y=4218.327mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13038.526mil|Location2.X=13044.86mil|Location1.Y=4507.526mil|Location2.Y=4513.859mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13038.526mil|Location2.X=13044.86mil|Location1.Y=4507.526mil|Location2.Y=4513.859mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12177.196mil|Location2.X=12209.399mil|Location1.Y=4252.386mil|Location2.Y=4266.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12177.196mil|Location2.X=12209.399mil|Location1.Y=4252.386mil|Location2.Y=4266.719mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11872.745mil|Location2.X=11904.948mil|Location1.Y=4413.036mil|Location2.Y=4427.369mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11872.745mil|Location2.X=11904.948mil|Location1.Y=4413.036mil|Location2.Y=4427.369mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12697.112mil|Location2.X=12729.315mil|Location1.Y=4557.449mil|Location2.Y=4571.782mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12697.112mil|Location2.X=12729.315mil|Location1.Y=4557.449mil|Location2.Y=4571.782mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12188.316mil|Location2.X=12220.519mil|Location1.Y=4724.023mil|Location2.Y=4738.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12188.316mil|Location2.X=12220.519mil|Location1.Y=4724.023mil|Location2.Y=4738.356mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12707.526mil|Location2.X=12713.86mil|Location1.Y=4838.526mil|Location2.Y=4844.859mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12707.526mil|Location2.X=12713.86mil|Location1.Y=4838.526mil|Location2.Y=4844.859mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12946.127mil|Location2.X=12972.206mil|Location1.Y=4102.808mil|Location2.Y=4124.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12946.127mil|Location2.X=12972.206mil|Location1.Y=4102.808mil|Location2.Y=4124.058mil|Absolute=True">Clearance Constraint: (18.452mil &lt; 20mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13442.165mil|Location2.X=13448.498mil|Location1.Y=4132.425mil|Location2.Y=4138.758mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13442.165mil|Location2.X=13448.498mil|Location1.Y=4132.425mil|Location2.Y=4138.758mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13795.495mil|Location2.X=13827.699mil|Location1.Y=4240.964mil|Location2.Y=4255.297mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13795.495mil|Location2.X=13827.699mil|Location1.Y=4240.964mil|Location2.Y=4255.297mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13969.196mil|Location2.X=14001.399mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13969.196mil|Location2.X=14001.399mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (19 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13966.433mil|Location2.X=13998.637mil|Location1.Y=4093.38mil|Location2.Y=4107.713mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13966.433mil|Location2.X=13998.637mil|Location1.Y=4093.38mil|Location2.Y=4107.713mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13260.343mil|Location2.X=13292.546mil|Location1.Y=4013.088mil|Location2.Y=4027.421mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13260.343mil|Location2.X=13292.546mil|Location1.Y=4013.088mil|Location2.Y=4027.421mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13932.565mil|Location2.X=13964.768mil|Location1.Y=3941.479mil|Location2.Y=3955.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13932.565mil|Location2.X=13964.768mil|Location1.Y=3941.479mil|Location2.Y=3955.812mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13284.14mil|Location2.X=13290.474mil|Location1.Y=4068.526mil|Location2.Y=4074.86mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13284.14mil|Location2.X=13290.474mil|Location1.Y=4068.526mil|Location2.Y=4074.86mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13330.171mil|Location2.X=13362.375mil|Location1.Y=4240.964mil|Location2.Y=4255.297mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13330.171mil|Location2.X=13362.375mil|Location1.Y=4240.964mil|Location2.Y=4255.297mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13326.689mil|Location2.X=13358.892mil|Location1.Y=4247.479mil|Location2.Y=4261.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13326.689mil|Location2.X=13358.892mil|Location1.Y=4247.479mil|Location2.Y=4261.812mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13392.833mil|Location2.X=13425.037mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13392.833mil|Location2.X=13425.037mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13846.026mil|Location2.X=13852.36mil|Location1.Y=4177.64mil|Location2.Y=4183.974mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13846.026mil|Location2.X=13852.36mil|Location1.Y=4177.64mil|Location2.Y=4183.974mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Track (13782mil,4171mil)(13836.858mil,4225.858mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4093.809mil|Location2.X=4126.012mil|Location1.Y=4642.833mil|Location2.Y=4657.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4093.809mil|Location2.X=4126.012mil|Location1.Y=4642.833mil|Location2.Y=4657.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K3-30(4215.5mil,4650mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4476.246mil|Location2.X=4504.366mil|Location1.Y=4805.497mil|Location2.Y=4826.747mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4476.246mil|Location2.X=4504.366mil|Location1.Y=4805.497mil|Location2.Y=4826.747mil|Absolute=True">Clearance Constraint: (15.755mil &lt; 20mil) Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4745.345mil|Location2.X=4773.572mil|Location1.Y=5214.503mil|Location2.Y=5235.753mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4745.345mil|Location2.X=4773.572mil|Location1.Y=5214.503mil|Location2.Y=5235.753mil|Absolute=True">Clearance Constraint: (9.929mil &lt; 20mil) Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4346.364mil|Location2.X=4374.642mil|Location1.Y=4808.7mil|Location2.Y=4829.95mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4346.364mil|Location2.X=4374.642mil|Location1.Y=4808.7mil|Location2.Y=4829.95mil|Absolute=True">Clearance Constraint: (11.206mil &lt; 20mil) Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3814.246mil|Location2.X=3842.366mil|Location1.Y=4805.497mil|Location2.Y=4826.747mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3814.246mil|Location2.X=3842.366mil|Location1.Y=4805.497mil|Location2.Y=4826.747mil|Absolute=True">Clearance Constraint: (15.755mil &lt; 20mil) Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3811.213mil|Location2.X=3839.333mil|Location1.Y=4807.44mil|Location2.Y=4828.69mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3811.213mil|Location2.X=3839.333mil|Location1.Y=4807.44mil|Location2.Y=4828.69mil|Absolute=True">Clearance Constraint: (11.869mil &lt; 20mil) Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4519.755mil|Location2.X=4551.958mil|Location1.Y=5489.255mil|Location2.Y=5503.588mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4519.755mil|Location2.X=4551.958mil|Location1.Y=5489.255mil|Location2.Y=5503.588mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3973.242mil|Location2.X=4005.445mil|Location1.Y=5310.253mil|Location2.Y=5324.586mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3973.242mil|Location2.X=4005.445mil|Location1.Y=5310.253mil|Location2.Y=5324.586mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4038.333mil|Location2.X=4070.537mil|Location1.Y=5272.471mil|Location2.Y=5286.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4038.333mil|Location2.X=4070.537mil|Location1.Y=5272.471mil|Location2.Y=5286.804mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3971.068mil|Location2.X=4003.271mil|Location1.Y=4983.662mil|Location2.Y=4997.995mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3971.068mil|Location2.X=4003.271mil|Location1.Y=4983.662mil|Location2.Y=4997.995mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K3-87a(4215.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5165.633mil|Location2.X=5197.836mil|Location1.Y=4580.666mil|Location2.Y=4594.999mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5165.633mil|Location2.X=5197.836mil|Location1.Y=4580.666mil|Location2.Y=4594.999mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5317.471mil|Location2.X=5349.674mil|Location1.Y=4842.144mil|Location2.Y=4856.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5317.471mil|Location2.X=5349.674mil|Location1.Y=4842.144mil|Location2.Y=4856.477mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5680.854mil|Location2.X=5687.187mil|Location1.Y=4532.123mil|Location2.Y=4538.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5680.854mil|Location2.X=5687.187mil|Location1.Y=4532.123mil|Location2.Y=4538.456mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5425.095mil,4324.095mil)(5869mil,4768mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5695.604mil|Location2.X=5701.937mil|Location1.Y=4517.373mil|Location2.Y=4523.706mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5695.604mil|Location2.X=5701.937mil|Location1.Y=4517.373mil|Location2.Y=4523.706mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5449mil,4289mil)(5901mil,4741mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5657.713mil|Location2.X=5685.833mil|Location1.Y=4806.751mil|Location2.Y=4828.001mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5657.713mil|Location2.X=5685.833mil|Location1.Y=4806.751mil|Location2.Y=4828.001mil|Absolute=True">Clearance Constraint: (11.869mil &lt; 20mil) Between Pad K4-85(5731mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4986.672mil|Location2.X=5018.876mil|Location1.Y=4912.833mil|Location2.Y=4927.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4986.672mil|Location2.X=5018.876mil|Location1.Y=4912.833mil|Location2.Y=4927.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.713mil|Location2.X=5023.833mil|Location1.Y=4806.751mil|Location2.Y=4828.001mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.713mil|Location2.X=5023.833mil|Location1.Y=4806.751mil|Location2.Y=4828.001mil|Absolute=True">Clearance Constraint: (11.869mil &lt; 20mil) Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4984.704mil|Location2.X=5016.907mil|Location1.Y=5016.144mil|Location2.Y=5030.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4984.704mil|Location2.X=5016.907mil|Location1.Y=5016.144mil|Location2.Y=5030.477mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5019.653mil|Location2.X=5040.903mil|Location1.Y=5379.17mil|Location2.Y=5407.423mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5019.653mil|Location2.X=5040.903mil|Location1.Y=5379.17mil|Location2.Y=5407.423mil|Absolute=True">Clearance Constraint: (5.701mil &lt; 20mil) Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5737.535mil|Location2.X=5769.738mil|Location1.Y=5249.781mil|Location2.Y=5264.114mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5737.535mil|Location2.X=5769.738mil|Location1.Y=5249.781mil|Location2.Y=5264.114mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5762.833mil|Location2.X=5795.037mil|Location1.Y=5347.144mil|Location2.Y=5361.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5762.833mil|Location2.X=5795.037mil|Location1.Y=5347.144mil|Location2.Y=5361.477mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5562.833mil|Location2.X=5595.037mil|Location1.Y=4940.983mil|Location2.Y=4955.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5562.833mil|Location2.X=5595.037mil|Location1.Y=4940.983mil|Location2.Y=4955.316mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-87a(5400mil,5023.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDHTXYYVJUAOIPBHXW05HPYW5Z2HG5WEV0IC1FTCBM2RVNJRXOTS2L"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=20mil) (InNet('37VP')or InNet('37VP_RAW') or InNet('E1 W1')or InNet('E1 W2')or InNet('E1 W3')or InNet('E2 W1')or InNet('E2 W2')or InNet('E2 W3')or InNet('E3 W1')or InNet('E3 W2')or InNet('E3 W3')or InNet('E4 W1')or InNet('E4 W2')or InNet('E4 W3')or InNet('E5 W1')or InNet('E5 W2')or InNet('E5 W3')or InNet('E6 W1')or InNet('E6 W2')or InNet('E6 W3')or InNet('NetESC1_1')or InNet('NetESC1_3')or InNet('NetESC1_5')or InNet('NetESC2_1')or InNet('NetESC2_3')or InNet('NetESC2_5')or InNet('NetESC3_1')or InNet('NetESC3_3')or InNet('NetESC3_5')or InNet('NetESC4_1')or InNet('NetESC4_3')or InNet('NetESC4_5')or InNet('NetESC5_1')or InNet('NetESC5_3')or InNet('NetESC5_5')or InNet('NetESC6_1')or InNet('NetESC6_3')or InNet('NetESC6_5')or InNet('NetC5_1')or InNet('NetC8_1')or InNet('NetC17_1')or InNet('NetC26_1')or InNet('NetC35_1')or InNet('NetC44_1')),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12281.591mil|Location2.X=12313.794mil|Location1.Y=4028.833mil|Location2.Y=4043.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12281.591mil|Location2.X=12313.794mil|Location1.Y=4028.833mil|Location2.Y=4043.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-30(12440mil,4036mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13079.541mil|Location2.X=13111.744mil|Location1.Y=4539.834mil|Location2.Y=4554.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13079.541mil|Location2.X=13111.744mil|Location1.Y=4539.834mil|Location2.Y=4554.168mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12823.037mil|Location2.X=12851.157mil|Location1.Y=4193.44mil|Location2.Y=4214.69mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12823.037mil|Location2.X=12851.157mil|Location1.Y=4193.44mil|Location2.Y=4214.69mil|Absolute=True">Clearance Constraint: (11.869mil &lt; 20mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12035.713mil|Location2.X=12063.833mil|Location1.Y=4193.44mil|Location2.Y=4214.69mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12035.713mil|Location2.X=12063.833mil|Location1.Y=4193.44mil|Location2.Y=4214.69mil|Absolute=True">Clearance Constraint: (11.869mil &lt; 20mil) Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12748.541mil|Location2.X=12780.744mil|Location1.Y=4870.834mil|Location2.Y=4885.168mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12748.541mil|Location2.X=12780.744mil|Location1.Y=4870.834mil|Location2.Y=4885.168mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12188.034mil|Location2.X=12220.237mil|Location1.Y=4727.342mil|Location2.Y=4741.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12188.034mil|Location2.X=12220.237mil|Location1.Y=4727.342mil|Location2.Y=4741.675mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12255.482mil|Location2.X=12287.686mil|Location1.Y=4328.194mil|Location2.Y=4342.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12255.482mil|Location2.X=12287.686mil|Location1.Y=4328.194mil|Location2.Y=4342.528mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-87a(12440mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12189.274mil|Location2.X=12221.478mil|Location1.Y=4417.465mil|Location2.Y=4431.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12189.274mil|Location2.X=12221.478mil|Location1.Y=4417.465mil|Location2.Y=4431.798mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K1-87a(12440mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13619.004mil|Location2.X=13647.124mil|Location1.Y=4445.497mil|Location2.Y=4466.747mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13619.004mil|Location2.X=13647.124mil|Location1.Y=4445.497mil|Location2.Y=4466.747mil|Absolute=True">Clearance Constraint: (15.755mil &lt; 20mil) Between Pad K2-30(13570mil,4664mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13116.881mil|Location2.X=13149.085mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13116.881mil|Location2.X=13149.085mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12940.447mil|Location2.X=12972.65mil|Location1.Y=4144.187mil|Location2.Y=4158.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12940.447mil|Location2.X=12972.65mil|Location1.Y=4144.187mil|Location2.Y=4158.52mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13820.956mil|Location2.X=13853.159mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13820.956mil|Location2.X=13853.159mil|Location1.Y=4482.833mil|Location2.Y=4497.167mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13813.851mil|Location2.X=13846.054mil|Location1.Y=4166.803mil|Location2.Y=4181.136mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13813.851mil|Location2.X=13846.054mil|Location1.Y=4166.803mil|Location2.Y=4181.136mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13827.112mil|Location2.X=13859.315mil|Location1.Y=3775.448mil|Location2.Y=3789.782mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13827.112mil|Location2.X=13859.315mil|Location1.Y=3775.448mil|Location2.Y=3789.782mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5704.255mil|Location2.X=5736.458mil|Location1.Y=4500.722mil|Location2.Y=4515.056mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5704.255mil|Location2.X=5736.458mil|Location1.Y=4500.722mil|Location2.Y=4515.056mil|Absolute=True">Clearance Constraint: (Collision &lt; 20mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDAEJMNIWAOICGLP0NHWSR4S3JOBBLI1QCGYF2O1OIQGL1NWZFKRSC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-30(12440mil,4036mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K1-87a(12440mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K3-87a(4215.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5425.095mil,4324.095mil)(5869mil,4768mil) on Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5449mil,4289mil)(5901mil,4741mil) on Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=125795.18mil|Location2.X=-125795.18mil|Location1.Y=125795.18mil|Location2.Y=-125795.18mil|Absolute=True">Short-Circuit Constraint: Between Pad K4-87a(5400mil,5023.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

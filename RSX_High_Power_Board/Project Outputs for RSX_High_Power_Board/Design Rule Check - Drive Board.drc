@@ -1,0 +1,149 @@
+Protel Design System Design Rule Check
+PCB File : C:\rsx_pcbs\RSX_High_Power_Board\Drive Board.PcbDoc
+Date     : 1/23/2020
+Time     : 11:07:54 PM
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad P14-6(2011.047mil,4565.457mil) on Multi-Layer on Net GND
+
+Processing Rule : Clearance Constraint (Gap=8mil) (All),(All)
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 8mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 8mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer 
+   Violation between Clearance Constraint: (18.452mil < 20mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 8mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (19 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 8mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 8mil) Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Track (13782mil,4171mil)(13836.858mil,4225.858mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K3-30(4215.5mil,4650mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (15.755mil < 20mil) Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (9.929mil < 20mil) Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (11.206mil < 20mil) Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (15.755mil < 20mil) Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (11.869mil < 20mil) Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K3-87a(4215.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 8mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5425.095mil,4324.095mil)(5869mil,4768mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 8mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5449mil,4289mil)(5901mil,4741mil) on Top Layer 
+   Violation between Clearance Constraint: (11.869mil < 20mil) Between Pad K4-85(5731mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (11.869mil < 20mil) Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (5.701mil < 20mil) Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-87a(5400mil,5023.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+Rule Violations :41
+
+Processing Rule : Clearance Constraint (Gap=20mil) (InNet('37VP')or InNet('37VP_RAW') or InNet('E1 W1')or InNet('E1 W2')or InNet('E1 W3')or InNet('E2 W1')or InNet('E2 W2')or InNet('E2 W3')or InNet('E3 W1')or InNet('E3 W2')or InNet('E3 W3')or InNet('E4 W1')or InNet('E4 W2')or InNet('E4 W3')or InNet('E5 W1')or InNet('E5 W2')or InNet('E5 W3')or InNet('E6 W1')or InNet('E6 W2')or InNet('E6 W3')or InNet('NetESC1_1')or InNet('NetESC1_3')or InNet('NetESC1_5')or InNet('NetESC2_1')or InNet('NetESC2_3')or InNet('NetESC2_5')or InNet('NetESC3_1')or InNet('NetESC3_3')or InNet('NetESC3_5')or InNet('NetESC4_1')or InNet('NetESC4_3')or InNet('NetESC4_5')or InNet('NetESC5_1')or InNet('NetESC5_3')or InNet('NetESC5_5')or InNet('NetESC6_1')or InNet('NetESC6_3')or InNet('NetESC6_5')or InNet('NetC5_1')or InNet('NetC8_1')or InNet('NetC17_1')or InNet('NetC26_1')or InNet('NetC35_1')or InNet('NetC44_1')),(All)
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-30(12440mil,4036mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (11.869mil < 20mil) Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (11.869mil < 20mil) Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-87a(12440mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K1-87a(12440mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (15.755mil < 20mil) Between Pad K2-30(13570mil,4664mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+   Violation between Clearance Constraint: (Collision < 20mil) Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer 
+Rule Violations :15
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad K1-30(12440mil,4036mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-85(12771mil,4410mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-86(12109mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-87(12440mil,4741mil) on Multi-Layer And Track (12351mil,5127mil)(13144mil,4334mil) on Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K1-87a(12440mil,4410mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-85(13239mil,4290mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-86(13901mil,4290mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Polygon Region (24 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-87(13570mil,3959mil) on Multi-Layer And Track (13273mil,4007mil)(13437mil,4171mil) on Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K2-87a(13570mil,4290mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K3-85(4546.5mil,5024mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K3-86(3884.5mil,5024mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K3-87(4215.5mil,5355mil) on Multi-Layer And Polygon Region (97 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K3-87a(4215.5mil,5024mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5425.095mil,4324.095mil)(5869mil,4768mil) on Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-30(5400mil,4649.31mil) on Multi-Layer And Track (5449mil,4289mil)(5901mil,4741mil) on Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-86(5069mil,5023.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (0 hole(s)) Top Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-87(5400mil,5354.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+   Violation between Short-Circuit Constraint: Between Pad K4-87a(5400mil,5023.31mil) on Multi-Layer And Polygon Region (328 hole(s)) Bottom Layer Location : [X = 0mil][Y = 0mil]
+Rule Violations :36
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=8mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=1000mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=1mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=5mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 92
+Waived Violations : 0
+Time Elapsed        : 00:00:02

@@ -1,0 +1,11 @@
+Record=TopLevelDocument|FileName=SCH-1-ESD Power Rails.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-2-Main Controls.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-3-ESC1.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-4-ESC2.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-5-ESC3.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-6-ESC4.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-7-ESC5.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-8-ESC6.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-9-Battery Voltage Indicators.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-10-Power Connectors.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SCH-1-ESD Power Rails.SchDoc|FileName=SCH-11-Out Going Connectors.SchDoc|SheetNumber= 
